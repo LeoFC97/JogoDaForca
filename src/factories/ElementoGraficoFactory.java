@@ -1,5 +1,9 @@
 package factories;
 
-public class ElementoGraficoFactory {
+import domain.BonecoFactory;
+import domain.LetraFactory;
+
+public interface ElementoGraficoFactory extends BonecoFactory,LetraFactory {
+
 
 }
