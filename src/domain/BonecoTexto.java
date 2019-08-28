@@ -2,14 +2,17 @@ package domain;
 
 public class BonecoTexto implements Boneco {
 	
-	private static BonecoTexto instancia;
-	synchronized public static BonecoTexto getInstancia() {
-		instancia = (instancia==null) ? new BonecoTexto() : instancia;
+	private static BonecoTexto soleInstance;
+	
+	private BonecoTexto(){
 		
-	    if (instancia == null) {
-	    	instancia = new BonecoTexto();
+	}
+	
+	 public static BonecoTexto getInstancia() {
+		if (soleInstance == null) {
+			soleInstance = new BonecoTexto();
 	    	}
-	    return instancia;
+	    return soleInstance;
 	}
 
 	@Override
