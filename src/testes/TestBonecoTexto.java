@@ -8,10 +8,12 @@ import domain.Boneco;
 import domain.BonecoTexto;
 
 public class TestBonecoTexto {
+	
+	BonecoTexto boneco;
 
 	@Test
 	public void test() {
-		Boneco  mock = new BonecoTexto();
+		//BonecoTexto  mock = BonecoTexto.getInstancia();
 		
 	}
 

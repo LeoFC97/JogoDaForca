@@ -5,10 +5,10 @@ import repositories.Repository;
 public abstract class EntityFactory {
 	
 	
-	private Repository repository;
+	protected static Repository repository;
 	
 	protected EntityFactory(Repository repository) {
-		this.repository = repository;
+		EntityFactory.repository = repository;
 		
 	}
 	
