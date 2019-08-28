@@ -11,6 +11,6 @@ public class DomainObject {
 
 	@Test
 	public void test() {
-		ObjetoDominio mock = new ObjetoDominioImpl((long) 4);
+		//ObjetoDominio mock = new ObjetoDominioImpl((long) 4);
 	}
 }
