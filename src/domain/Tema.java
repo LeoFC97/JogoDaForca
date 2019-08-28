@@ -2,15 +2,37 @@ package domain;
 
 public class Tema extends ObjetoDominioImpl {
 	
-	public Tema(Long id) {
+	public Tema(Long id, String nome) {
 		super(id);
-		// TODO Auto-generated constructor stub
+		this.nome = nome;
 	}
 
 
 	private String nome;
 	
+	//public static Tema criar(long id, String nome) {
+		
+	//}
 	
+	//public static Tema reconstituir(long id, String nome) {
+		
+	//}
+	
+	
+	public String getNome() {
+		return nome;
+	}
+
+
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+
 	@Override
 	public long getID() {
 		// TODO Auto-generated method stub
