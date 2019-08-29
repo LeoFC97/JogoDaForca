@@ -26,6 +26,7 @@ public class Rodada extends ObjetoDominioImpl{
 	//}
 	
 	public static int getMaxErros() {
+		return 1;
 		
 	}
 	
@@ -68,22 +69,17 @@ public class Rodada extends ObjetoDominioImpl{
 		return null;
 	}
 	public int getNumPalavras() {
-		return null;
+		return 1;
 	}
 	public void tentar(char codigo) {
-		return null;
 	}
 	public void arriscar(String[] palavras) {
-		return null;
 	}
 	public void exibirItens() {
-		return null;
 	}
 	public void exibirBoneco() {
-		return null;
 	}
 	public void exibirPalavras() {
-		return null;
 	}
 	public  Letra[]getTentativas() {
 		return null;
@@ -95,28 +91,28 @@ public class Rodada extends ObjetoDominioImpl{
 		return null;
 	}
 	public int calcularPontos() {
-		return null;
+		return 1;
 	}
 	public boolean encerrou() {
-		return null;
+		return false;
 	}
 	public boolean descobriu() {
-		return null;
+		return false;
 	}
 	public boolean arriscou() {
-		return null;
+		return false;
 	}
 	public int getQtdeTentativaRestantes() {
-		return null;
+		return 1;
 	}
 	public int getQtdeErros() {
-		return null;
+		return 1;
 	}
 	public int getQtdeAcertos() {
-		return null;
+		return 1;
 	}
 	public int getQtdeTentativas() {
-		return null;
+		return 1;
 	}
 	
 	
