@@ -8,7 +8,7 @@ public class Rodada extends ObjetoDominioImpl{
 	private static int pontosQuandoDescobreTodasAsPalavras = 100;
 	private static int pontosPorLetraEncoberta = 15;
 	
-	public Rodada(Long id) {
+	public Rodada(long id) {
 		super(id);
 		// TODO Auto-generated constructor stub
 	}

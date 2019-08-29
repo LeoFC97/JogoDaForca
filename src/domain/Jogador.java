@@ -5,7 +5,7 @@ public class Jogador extends ObjetoDominioImpl {
 	private String nome;
 	private int pontuacao = 0;
 	
-	public Jogador(Long id) {
+	public Jogador(long id) {
 		super(id);
 		
 	}

@@ -2,7 +2,9 @@ package domain;
 
 public class Palavra extends ObjetoDominioImpl {
 	
-	public Palavra(Long id) {
+	private Tema tema;
+	
+	public Palavra(long id, String palavra, Tema tema) {
 		super(id);
 		
 	}
