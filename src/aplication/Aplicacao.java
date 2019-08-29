@@ -9,7 +9,7 @@ import repositories.RepositoryFactory;
 
 public class Aplicacao {
 	
-	private final String[] TIPOS_REPOSITORY_FACTORY = {"memoria", "relacional"};
+	private final String[] TIPOS_REPOSITORY_FACTORY = {"memoria", "relacional","json"};
 	private final String[] TIPOS_ELEMENTO_GRAFICO_FACTORY = {"texto","imagem"};
 	private final String[] TIPOS_RODADA_FACTORY = {"sorteio"};
 	
