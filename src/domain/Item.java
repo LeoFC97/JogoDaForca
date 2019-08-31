@@ -6,6 +6,10 @@ public class Item extends ObjetoDominioImpl{
 		super(id);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Item(int id, Palavra palavra, int posicoesEncobertas,String palavrasArriscada) {
+		super(id);
+	}
 	private boolean posicoesDescobertas[];
 	private String palavraArriscada = null;
 	

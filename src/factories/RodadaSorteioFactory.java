@@ -13,12 +13,12 @@ public class RodadaSorteioFactory extends RodadaFactoryImpl {
 	private RodadaSorteioFactory(RodadaRepository repository, TemaRepository temaRepository,
 			PalavraRepository palavraRepository) {
 		super(repository, temaRepository, palavraRepository);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public static void createSoleInstance(RodadaRepository repository, TemaRepository temaRepository)
 	{			
-	/////////////?????????????????	
+		new RodadaSorteioFactory(repository, temaRepository, palavraRepository);
 	}
 	
 	public static RodadaSorteioFactory getSoleInstance() {
@@ -30,7 +30,9 @@ public class RodadaSorteioFactory extends RodadaFactoryImpl {
 	
 	public Rodada getRodada(Jogador jogador) {
 		
-		return rodada; // ???????????????
+		
+		
+		return rodada;
 	}
 
 }

@@ -1,12 +1,17 @@
 package repositories;
 
+import java.util.HashMap;
 import domain.Jogador;
 import domain.Rodada;
+
+
 
 public class MemoriaRodadaRepository implements RodadaRepository {
 	
 	
 private static MemoriaRodadaRepository soleInstance;
+private HashMap<Long, Rodada> pool = new HashMap<Long, Rodada>();
+private Rodada[] resultados;
 	
 	private MemoriaRodadaRepository() {
 		
@@ -27,31 +32,39 @@ private static MemoriaRodadaRepository soleInstance;
 
 	@Override
 	public Rodada getPorId(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return pool.get(id);
 	}
 
 	@Override
 	public Rodada[] getPorJogador(Jogador jogador) {
-		// TODO Auto-generated method stub
-		return null;
+		resultados = null;
+		int i=0;
+		for (Rodada r : pool.values()) {
+			if(r.getJogador().equals(jogador))
+				resultados[i] = r;
+				i++;
+		    }
+		return resultados;
+		}
+	
+
+	@Override
+	public void inserir(Rodada rodada) throws RepositoryException {
+		this.pool.put(rodada.getID(), rodada);
+
 	}
 
 	@Override
-	public void inserir(Jogador jogador) throws RepositoryException {
-		// TODO Auto-generated method stub
+	public void atualizar(Rodada rodada) throws RepositoryException {
+		this.pool.remove(rodada.getID());
+		this.pool.put(rodada.getID(), rodada);
 
 	}
 
 	@Override
-	public void atualizar(Jogador jogador) throws RepositoryException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void remover(Jogador jogador) throws RepositoryException {
-		// TODO Auto-generated method stub
+	public void remover(Rodada rodada) throws RepositoryException {
+		this.pool.remove(rodada.getID());
 
 	}
 

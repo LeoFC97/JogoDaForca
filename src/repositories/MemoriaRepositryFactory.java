@@ -19,7 +19,7 @@ public class MemoriaRepositryFactory implements RepositoryFactory {
 	@Override
 	public PalavraRepository getPalavraRepository() {
 		// TODO Auto-generated method stub
-		return null;
+		return MemoriaPalavraRepository.getSoleInstance();
 	}
 
 	@Override

@@ -6,6 +6,8 @@ import domain.Letra;
 public class ElementoGraficoTextoFactory implements ElementoGraficoFactory {
 	
 	private static ElementoGraficoTextoFactory soleInstance;
+	private BonecoTextoFactory bonecoTextoFactory;
+	private LetraTextoFactory letraTextoFactory;
 	
 	private ElementoGraficoTextoFactory() {
 		
@@ -21,19 +23,20 @@ public class ElementoGraficoTextoFactory implements ElementoGraficoFactory {
 	@Override
 	public Boneco getBoneco() {
 		// TODO Auto-generated method stub
-		return null;
+		return bonecoTextoFactory.getBoneco();
 	}
 
 	@Override
 	public Letra getLetra(char codigo) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return letraTextoFactory.getLetra(codigo);
+		
 	}
 
 	@Override
 	public Letra getLetraEncoberta() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return letraTextoFactory.getLetraEncoberta();
 	}
 
 }

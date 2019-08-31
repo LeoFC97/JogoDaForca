@@ -31,8 +31,8 @@ public abstract class Letra {
 				hashCode();
 	}
 	
-	//public final String toString() {
-		
-	//}
+	public final String toString() {
+		return this.toString();
+	}
 
 }

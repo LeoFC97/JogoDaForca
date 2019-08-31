@@ -3,6 +3,6 @@ package factories;
 import domain.Jogador;
 
 public interface JogadorFactory {
-	public Jogador getJogador();
+	public Jogador getJogador(String nome);
 
 }

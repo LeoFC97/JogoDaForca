@@ -1,10 +1,14 @@
 package factories;
 
+import java.util.HashMap;
+
 import domain.Letra;
+import domain.LetraTexto;
 
 public class LetraTextoFactory extends LetraFactoryImpl {
 
 	private static LetraTextoFactory soleInstance;
+	
 	
 	private LetraTextoFactory() {
 		
@@ -18,7 +22,7 @@ public class LetraTextoFactory extends LetraFactoryImpl {
 	}
 	
 	protected Letra criarLetra(char codigo) {
-		return null;//???????????
+		return new LetraTexto(codigo);
 		
 	}
 }
