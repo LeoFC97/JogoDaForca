@@ -6,12 +6,12 @@ import repositories.Repository;
 
 public class JogadorFactoryImpl extends EntityFactory implements JogadorFactory {
 	
-	private JogadorRepository jogadorRepository;
 	private static JogadorFactoryImpl soleInstance;
+	private JogadorRepository jogadorRepository;
 
-	protected JogadorFactoryImpl(Repository repository) {
+	private JogadorFactoryImpl(Repository repository) {
 		super(repository);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public static JogadorFactoryImpl getSoleInstance() {
@@ -24,14 +24,16 @@ public class JogadorFactoryImpl extends EntityFactory implements JogadorFactory 
 	public static void createSoleInstance(JogadorRepository repository) {
 	}
 	
+	
+	
 	@SuppressWarnings("unused")
 	private JogadorFactory getJogadorFactory() {
-		return null;//?????????
+		return null;
 	}
 
 	@Override
-	public Jogador getJogador() {//???????//
-		// TODO Auto-generated method stub
+	public Jogador getJogador(String nome) {
+		
 		return null;
 	}
 

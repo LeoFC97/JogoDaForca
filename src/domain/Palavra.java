@@ -1,28 +1,41 @@
 package domain;
 
+import factories.LetraTextoFactory;
+import repositories.MemoriaRepositryFactory;
+
 public class Palavra extends ObjetoDominioImpl {
 	
-	public Palavra(Long id) {
+	private LetraFactory letraFactory;
+	private Tema tema;
+	
+	
+	
+	
+	public Palavra(long id, String palavra, Tema tema) {
 		super(id);
+		getLetraFactory();
 		
 	}
 	
 	public static void setLetraFactory(LetraFactory factory ) {
 		
+		
 	}
 	
-	//public static LetraFactory getLetraFactory() {
+	public static LetraFactory getLetraFactory() {
+		return LetraTextoFactory.getSoleInstance();
 	
-	//}
+	}
 	
-	//public static Palavra criar(long id,String palavra,Tema tema) {
-
+	public static Palavra criar(long id,String palavra,Tema tema) {
+			return new Palavra(id,palavra,tema);
 		
-	//}
+	}
 	
-	//public static Palavra reconstituir(long id,String palavra, Tema tema) {
-		
-	//}
+	public static Palavra reconstituir(long id,String palavra, Tema tema) {
+		return MemoriaRepositryFactory.getSoleInstance().getPalavraRepository().getPalavra(palavra);
+		// Vai no BD e retorna a palavra.
+	}
 
 	//public Letra[] getLetras() {
 		
@@ -48,17 +61,17 @@ public class Palavra extends ObjetoDominioImpl {
 		
 	//}
 	
-	//public boolean comparar(String palavra) {
-		
-	//}
+	public boolean comparar(String palavra) {
+		return false;
+	}
 	
 	//public int getTamanho() {
 		
 	//}
 	
-	//public String toString() {
-		
-	//}
+	public String toString() {
+		return null;
+	}
 	
 	@Override
 	public long getID() {

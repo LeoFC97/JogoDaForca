@@ -1,22 +1,32 @@
 package factories;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+
 import domain.Letra;
 import domain.LetraFactory;
+import domain.Palavra;
 
 public abstract class LetraFactoryImpl implements LetraFactory {
 	
+	private  List<Letra> pool = new ArrayList<Letra>();
+	private HashMap<Long , Letra> encoberta = new  HashMap<Long , Letra>();
 	
 	protected LetraFactoryImpl() {
 		
 	}
 	
 	protected Letra criarLetra(char codigo) {
-		return null;// ???????????
+		return null;
 	}
 
 	@Override
 	public Letra getLetra(char codigo) {
-		// TODO Auto-generated method stub
+		
+		
+		
 		return null;
 	}
 

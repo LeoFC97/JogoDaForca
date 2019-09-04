@@ -1,5 +1,8 @@
 package domain;
 
+import factories.JogadorFactoryImpl;
+import factories.RodadaSorteioFactory;
+
 public class Rodada extends ObjetoDominioImpl{
 
 	
@@ -8,55 +11,58 @@ public class Rodada extends ObjetoDominioImpl{
 	private static int pontosQuandoDescobreTodasAsPalavras = 100;
 	private static int pontosPorLetraEncoberta = 15;
 	
-	public Rodada(Long id) {
-		super(id);
-		// TODO Auto-generated constructor stub
-	}
-	
-	
+	private static BonecoFactory bonecoFactory;	
 
 	@Override
 	public long getID() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return this.getID();
 	}
 	
-	//public static int getMaxPalavras() {
-	//	return null;
-	//}
+	public static int getMaxPalavras() {
+		return maxPalavras;
+	}
 	
 	public static int getMaxErros() {
-		return 1;
+		return maxErros;
 		
 	}
 	
 	public static void setMaxErros(int max) {
-		
+		maxErros = max;
 	}
-	//public static int getPontosQuandoDescobreTodasAsPalavras() {
-	//	return null;
-	//}
+	public static int getPontosQuandoDescobreTodasAsPalavras() {
+		return pontosQuandoDescobreTodasAsPalavras;
+	}
 	public static void setPontosQuandoDescobreTodasAsPalavras(int pontos) {
-		
+		pontosQuandoDescobreTodasAsPalavras = pontos;
 	}
-	//public static int getPontosPorLetraEncoberta() {
-	//	return null;
-	//}
+	public static int getPontosPorLetraEncoberta() {
+		return pontosPorLetraEncoberta;
+	}
 	public static void setPontosPorLetraEncoberta(int pontos) {
-		
+		pontosPorLetraEncoberta = pontos;
 	}
 	public static void setBonecoFactory(BonecoFactory bonecoFactory) {
 		
 	}
 	
 	public static BonecoFactory getBonecoFactory() {
-		return null;
+		return bonecoFactory;
 	}
 	public static Rodada criar(long id,Palavra[] palavras,Jogador jogador) {
-		return null;
+		return new Rodada(id, palavras, jogador);
 	}
 	public static Rodada reconstituir(long id, Item[] itens, Letra[] erradas,Jogador jogador) {
 		return null;
+	}
+	
+	private Rodada(long id,Palavra[] palavras,Jogador jogador) {
+		super(id);
+	}
+	
+	private Rodada(long id,Item[] itens,Jogador jogador) {
+		super(id);
 	}
 	
 	public Jogador getJogador() {

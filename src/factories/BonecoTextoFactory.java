@@ -2,6 +2,7 @@ package factories;
 
 import domain.Boneco;
 import domain.BonecoFactory;
+import domain.BonecoTexto;
 
 public class BonecoTextoFactory implements BonecoFactory {
 	
@@ -19,10 +20,10 @@ public class BonecoTextoFactory implements BonecoFactory {
 	}
 	
 
-	@Override
+	
 	public Boneco getBoneco() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return BonecoTexto.getInstancia();
 	}
 
 }

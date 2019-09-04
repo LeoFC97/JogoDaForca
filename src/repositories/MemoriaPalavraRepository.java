@@ -1,11 +1,16 @@
 package repositories;
 
+import java.util.HashMap;
+import java.util.Iterator;
+
 import domain.Palavra;
 import domain.Tema;
 
 public class MemoriaPalavraRepository implements PalavraRepository {
 	
 	private static MemoriaPalavraRepository soleInstance;
+	
+	private HashMap<Long, Palavra> pool = new HashMap<Long, Palavra>();
 	
 	private MemoriaPalavraRepository() {
 		
@@ -38,31 +43,49 @@ public class MemoriaPalavraRepository implements PalavraRepository {
 
 	@Override
 	public Palavra[] getTodas() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return (Palavra[]) this.pool.values().toArray();
 	}
 
 	@Override
 	public Palavra getPalavra(String palavra) {
-		// TODO Auto-generated method stub
-		return null;
+		Palavra resultado = null;
+		Iterator<Palavra> palavras = this.pool.values().iterator();
+		while(palavras.hasNext()) {
+			Palavra p = palavras.next();
+			if(p.comparar(palavra)) {
+				resultado = p;
+				break;
+			}
+		}
+		return resultado;
 	}
 
 	@Override
 	public void inserir(Palavra palavra) throws RepositoryException {
-		// TODO Auto-generated method stub
+		try {
+			if(!pool.containsValue(palavra))
+				this.pool.put(palavra.getID(), palavra);
+		}catch(Exception e){
+			e.getMessage();
+			System.out.println("Palavra já existe");
+		}
+		
 
 	}
 
 	@Override
 	public void atualizar(Palavra palavra) throws RepositoryException {
-		// TODO Auto-generated method stub
+		remover(palavra);
+		inserir(palavra);
+		
 
 	}
 
+
 	@Override
 	public void remover(Palavra palavra) throws RepositoryException {
-		// TODO Auto-generated method stub
+		this.pool.remove(palavra.getID());
 
 	}
 

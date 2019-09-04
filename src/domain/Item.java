@@ -2,9 +2,13 @@ package domain;
 
 public class Item extends ObjetoDominioImpl{
 	
-	public Item(Long id) {
+	public Item(long id) {
 		super(id);
 		// TODO Auto-generated constructor stub
+	}
+	
+	public Item(int id, Palavra palavra, int posicoesEncobertas,String palavrasArriscada) {
+		super(id);
 	}
 	private boolean posicoesDescobertas[];
 	private String palavraArriscada = null;

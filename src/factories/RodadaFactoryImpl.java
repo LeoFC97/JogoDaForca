@@ -1,6 +1,5 @@
 package factories;
 
-import domain.Jogador;
 import domain.Rodada;
 import repositories.PalavraRepository;
 import repositories.RodadaRepository;
@@ -33,10 +32,6 @@ public abstract class RodadaFactoryImpl implements RodadaFactory {
 		return palavraRepository;
 	}
 	
-	@Override
-	public Rodada getRodada(Jogador jogador) {
-		
-		return rodada; // ???????????????
-	}
+	
 
 }

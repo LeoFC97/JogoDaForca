@@ -2,7 +2,7 @@ package domain;
 
 public class Tema extends ObjetoDominioImpl {
 	
-	public Tema(Long id, String nome) {
+	public Tema(long id, String nome) {
 		super(id);
 		this.nome = nome;
 	}

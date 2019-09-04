@@ -32,13 +32,15 @@ public class Aplicacao {
 	
 	public void setup() {
 		
+		
 	}
 	
 	public String[] getTiposRepositoryFactory() {
-		return null;
+		return TIPOS_REPOSITORY_FACTORY;
 	}
 	
 	public void setTipoRepositoryFactory(String tipo) {
+		this.tipoRepositoryFactory = tipo;
 		
 	}
 	
@@ -47,11 +49,11 @@ public class Aplicacao {
 	}
 	
 	public String[] getTiposElementoGraficoFactory() {
-		return null;
+		return TIPOS_ELEMENTO_GRAFICO_FACTORY;
 	}
 	
 	public void setTipoElementoGraficoFactory(String stipo) {
-		
+		this.tipoElementoGraficoFactory = stipo;
 	}
 	
 	public ElementoGraficoFactory getElementoGraficoFactory() {
@@ -59,11 +61,11 @@ public class Aplicacao {
 	}
 	
 	public String[] getTiposRodadaFactory() {
-		return null;
+		return TIPOS_RODADA_FACTORY;
 	}
 	
 	public void setTipoRodadaFactory(String tipo) {
-		
+		tipoRodadaFactory = tipo;
 	}
 	
 	public RodadaFactory getRodadaFactory() {
